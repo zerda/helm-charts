@@ -2,7 +2,7 @@
 apiVersion: {{ include "kube-prometheus-stack.pdb.apiVersion" . }}
 kind: PodDisruptionBudget
 metadata:
-  name: {{ template "kube-prometheus-stack.fullname" . }}-alertmanager
+  name: {{ template "kube-prometheus-stack.alertmanager.fullname" . }}
   namespace: {{ template "kube-prometheus-stack.namespace" . }}
   labels:
     app: {{ template "kube-prometheus-stack.name" . }}-alertmanager
@@ -17,5 +17,5 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: alertmanager
-      alertmanager: {{ template "kube-prometheus-stack.fullname" . }}-alertmanager
+      alertmanager: {{ template "kube-prometheus-stack.alertmanager.fullname" . }}
 {{- end }}
