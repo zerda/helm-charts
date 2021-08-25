@@ -8,14 +8,14 @@
 apiVersion: v1
 kind: List
 metadata:
-  name: {{ include "kube-prometheus-stack.fullname" $ }}-alertmanager-ingressperreplica
+  name: {{ include "kube-prometheus-stack.alertmanager.fullname" $ }}-ingressperreplica
   namespace: {{ template "kube-prometheus-stack.namespace" . }}
 items:
 {{ range $i, $e := until $count }}
   - kind: Ingress
     apiVersion: {{ include "kube-prometheus-stack.ingress.apiVersion" $ }}
     metadata:
-      name: {{ include "kube-prometheus-stack.fullname" $ }}-alertmanager-{{ $i }}
+      name: {{ include "kube-prometheus-stack.alertmanager.fullname" $ }}-{{ $i }}
       namespace: {{ template "kube-prometheus-stack.namespace" $ }}
       labels:
         app: {{ include "kube-prometheus-stack.name" $ }}-alertmanager
@@ -45,11 +45,11 @@ items:
                 backend:
                   {{- if $apiIsStable }}
                   service:
-                    name: {{ include "kube-prometheus-stack.fullname" $ }}-alertmanager-{{ $i }}
+                    name: {{ include "kube-prometheus-stack.alertmanager.fullname" $ }}-{{ $i }}
                     port:
                       number: {{ $servicePort }}
                   {{- else }}
-                  serviceName: {{ include "kube-prometheus-stack.fullname" $ }}-alertmanager-{{ $i }}
+                  serviceName: {{ include "kube-prometheus-stack.alertmanager.fullname" $ }}-{{ $i }}
                   servicePort: {{ $servicePort }}
       {{- end }}
       {{- end -}}

@@ -1,6 +1,6 @@
 {{- if and .Values.alertmanager.enabled .Values.alertmanager.ingress.enabled }}
 {{- $pathType := .Values.alertmanager.ingress.pathType | default "ImplementationSpecific" }}
-{{- $serviceName := printf "%s-%s" (include "kube-prometheus-stack.fullname" .) "alertmanager" }}
+{{- $serviceName := printf "%s" (include "kube-prometheus-stack.alertmanager.fullname" .) }}
 {{- $servicePort := .Values.alertmanager.service.port -}}
 {{- $routePrefix := list .Values.alertmanager.alertmanagerSpec.routePrefix }}
 {{- $paths := .Values.alertmanager.ingress.paths | default $routePrefix -}}
