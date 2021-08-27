@@ -4,14 +4,14 @@
 apiVersion: v1
 kind: List
 metadata:
-  name: {{ include "kube-prometheus-stack.fullname" $ }}-prometheus-serviceperreplica
+  name: {{ include "kube-prometheus-stack.prometheus.fullname" $ }}-serviceperreplica
   namespace: {{ template "kube-prometheus-stack.namespace" . }}
 items:
 {{- range $i, $e := until $count }}
   - apiVersion: v1
     kind: Service
     metadata:
-      name: {{ include "kube-prometheus-stack.fullname" $ }}-prometheus-{{ $i }}
+      name: {{ include "kube-prometheus-stack.prometheus.fullname" $ }}-{{ $i }}
       namespace: {{ template "kube-prometheus-stack.namespace" $ }}
       labels:
         app: {{ include "kube-prometheus-stack.name" $ }}-prometheus
@@ -43,7 +43,7 @@ items:
       selector:
         app.kubernetes.io/name: prometheus
         prometheus: {{ include "kube-prometheus-stack.fullname" $ }}-prometheus
-        statefulset.kubernetes.io/pod-name: prometheus-{{ include "kube-prometheus-stack.fullname" $ }}-prometheus-{{ $i }}
+        statefulset.kubernetes.io/pod-name: prometheus-{{ include "kube-prometheus-stack.prometheus.fullname" $ }}-{{ $i }}
       type: "{{ $serviceValues.type }}"
 {{- end }}
 {{- end }}
