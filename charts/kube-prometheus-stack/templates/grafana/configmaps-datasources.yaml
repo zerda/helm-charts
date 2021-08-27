@@ -28,7 +28,7 @@ data:
       {{- if .Values.grafana.sidecar.datasources.url }}
       url: {{ .Values.grafana.sidecar.datasources.url }}
       {{- else }}
-      url: http://{{ template "kube-prometheus-stack.fullname" . }}-prometheus.{{ template "kube-prometheus-stack.namespace" . }}:{{ .Values.prometheus.service.port }}/{{ trimPrefix "/" .Values.prometheus.prometheusSpec.routePrefix }}
+      url: http://{{ template "kube-prometheus-stack.prometheus.fullname" . }}.{{ template "kube-prometheus-stack.namespace" . }}:{{ .Values.prometheus.service.port }}/{{ trimPrefix "/" .Values.prometheus.prometheusSpec.routePrefix }}
       {{- end }}
       access: proxy
       isDefault: {{ .Values.grafana.sidecar.datasources.isDefaultDatasource }}
@@ -44,7 +44,7 @@ data:
     - name: Prometheus-{{ . }}
       type: prometheus
       uid: {{ $.Values.grafana.sidecar.datasources.uid }}-replica-{{ . }}
-      url: http://prometheus-{{ template "kube-prometheus-stack.prometheus.crname" $ }}-{{ . }}.prometheus-operated:9090/{{ trimPrefix "/" $.Values.prometheus.prometheusSpec.routePrefix }}
+      url: http://prometheus-{{ template "kube-prometheus-stack.prometheus.fullname" $ }}-{{ . }}.prometheus-operated:9090/{{ trimPrefix "/" $.Values.prometheus.prometheusSpec.routePrefix }}
       access: proxy
       isDefault: false
       jsonData:
