@@ -43,13 +43,13 @@ The longest name that gets created adds and extra 37 characters, so truncation s
 {{- print "networking.k8s.io/v1" -}}
 {{- end }}
 
-{{/* Alertmanager custom resource instance name */}}
-{{- define "kube-prometheus-stack.alertmanager.crname" -}}
-{{- if .Values.cleanPrometheusOperatorObjectNames }}
-{{- include "kube-prometheus-stack.fullname" . }}
-{{- else }}
-{{- print (include "kube-prometheus-stack.fullname" .) "-alertmanager" -}}
-{{- end }}
+{{/* Fullname suffixed with alertmanager */}}
+{{- define "kube-prometheus-stack.alertmanager.fullname" -}}
+{{- if .Values.alertmanager.fullnameOverride -}}
+{{- .Values.alertmanager.fullnameOverride | trunc 26 | trimSuffix "-" -}}
+{{- else -}}
+{{- printf "%s-alertmanager" (include "kube-prometheus-stack.fullname" .) -}}
+{{- end -}}
 {{- end }}
 
 {{/* Fullname suffixed with thanos-ruler */}}
