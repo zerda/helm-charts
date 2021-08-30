@@ -31,7 +31,11 @@ The longest name that gets created adds and extra 37 characters, so truncation s
 
 {{/* Fullname suffixed with prometheus */}}
 {{- define "kube-prometheus-stack.prometheus.fullname" -}}
+{{- if .Values.prometheus.fullnameOverride -}}
+{{- .Values.prometheus.fullnameOverride | trunc 26 | trimSuffix "-" -}}
+{{- else -}}
 {{- printf "%s-prometheus" (include "kube-prometheus-stack.fullname" .) -}}
+{{- end -}}
 {{- end }}
 
 {{/* Fullname suffixed with alertmanager */}}
