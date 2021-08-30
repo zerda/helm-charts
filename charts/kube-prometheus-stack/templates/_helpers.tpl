@@ -29,13 +29,13 @@ The longest name that gets created adds and extra 37 characters, so truncation s
 {{- printf "%s-operator" (include "kube-prometheus-stack.fullname" .) -}}
 {{- end }}
 
-{{/* Prometheus custom resource instance name */}}
-{{- define "kube-prometheus-stack.prometheus.crname" -}}
-{{- if .Values.cleanPrometheusOperatorObjectNames }}
-{{- include "kube-prometheus-stack.fullname" . }}
-{{- else }}
-{{- print (include "kube-prometheus-stack.fullname" .) "-prometheus" }}
-{{- end }}
+{{/* Fullname suffixed with prometheus */}}
+{{- define "kube-prometheus-stack.prometheus.fullname" -}}
+{{- if .Values.prometheus.fullnameOverride -}}
+{{- .Values.prometheus.fullnameOverride | trunc 26 | trimSuffix "-" -}}
+{{- else -}}
+{{- printf "%s-prometheus" (include "kube-prometheus-stack.fullname" .) -}}
+{{- end -}}
 {{- end }}
 
 {{/* Prometheus apiVersion for networkpolicy */}}
