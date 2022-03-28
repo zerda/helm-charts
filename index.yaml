@@ -3,26 +3,6 @@ entries:
   alertmanager:
   - apiVersion: v2
     appVersion: v0.23.0
-    created: "2022-03-28T16:08:20.605661141Z"
-    description: The Alertmanager handles alerts sent by client applications such
-      as the Prometheus server.
-    digest: 477c296c9e8fcf0c4280489a447658f57c0c0a21a7ad67b0e8e761cb7b1ef1a7
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: alertmanager
-    sources:
-    - https://github.com/prometheus/alertmanager
-    type: application
-    urls:
-    - https://github.com/prometheus-community/helm-charts/releases/download/alertmanager-0.17.0/alertmanager-0.17.0.tgz
-    version: 0.17.0
-  - apiVersion: v2
-    appVersion: v0.23.0
     created: "2022-02-07T21:34:44.991961914Z"
     description: The Alertmanager handles alerts sent by client applications such
       as the Prometheus server.
@@ -16347,6 +16327,40 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/kube-state-metrics-2.13.2/kube-state-metrics-2.13.2.tgz
     version: 2.13.2
   prometheus:
+  - apiVersion: v2
+    appVersion: 2.34.0
+    created: "2022-03-28T16:11:37.160607234Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.4.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 284320b8cc72b0ac6facdc4e9eb4282e582a18ef46a2b4b64b03d1dbd8a4720a
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-15.7.0/prometheus-15.7.0.tgz
+    version: 15.7.0
   - apiVersion: v2
     appVersion: 2.34.0
     created: "2022-03-24T20:32:07.528106907Z"
@@ -46655,4 +46669,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-28T16:08:20.623899702Z"
+generated: "2022-03-28T16:11:37.174043434Z"
