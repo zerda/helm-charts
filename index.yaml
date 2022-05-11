@@ -17175,6 +17175,38 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
+    created: "2022-05-11T05:10:21.762009841Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.7.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: dcbd568ea3d50e3944c5cc191878c6b3b9122633ec02d9d57b97fa5b9fdae8f8
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-15.8.6/prometheus-15.8.6.tgz
+    version: 15.8.6
+  - apiVersion: v2
+    appVersion: 2.34.0
     created: "2022-04-20T09:25:56.133553264Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
@@ -48134,4 +48166,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-10T20:34:38.035528806Z"
+generated: "2022-05-11T05:10:21.777979362Z"
