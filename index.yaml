@@ -31668,6 +31668,26 @@ entries:
     - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-kafka-exporter-0.1.4/prometheus-kafka-exporter-0.1.4.tgz
     version: 0.1.4
   prometheus-mongodb-exporter:
+  - apiVersion: v2
+    appVersion: 0.31.0
+    created: "2022-06-10T17:08:51.899502502Z"
+    description: A Prometheus exporter for MongoDB metrics
+    digest: 01274130d0de739a761b517917741990cc93bfca585eeb20fa19ec5fa88dd8b8
+    home: https://github.com/percona/mongodb_exporter
+    keywords:
+    - exporter
+    - metrics
+    - mongodb
+    - prometheus
+    maintainers:
+    - email: ssheehy@firescope.com
+      name: steven-sheehy
+    name: prometheus-mongodb-exporter
+    sources:
+    - https://github.com/percona/mongodb_exporter
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-mongodb-exporter-3.0.0/prometheus-mongodb-exporter-3.0.0.tgz
+    version: 3.0.0
   - apiVersion: v1
     appVersion: v0.11.0
     created: "2022-06-02T07:13:16.166045156Z"
@@ -49356,4 +49376,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-10T17:07:29.93171527Z"
+generated: "2022-06-10T17:08:51.917674262Z"
