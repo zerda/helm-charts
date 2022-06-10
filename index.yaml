@@ -31421,6 +31421,36 @@ entries:
         - name: Chart Source
           url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
     apiVersion: v2
+    appVersion: v1.4.2
+    created: "2022-06-10T22:29:15.021560137Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.9.3
+    description: A Helm chart to export the metrics from Kafka in Prometheus format
+      using the kafka-exporter from https://github.com/danielqsj/kafka_exporter
+    digest: 79e4e261885f3ce89579c33cdebbe74a4d1c822fdb98a610de2768ea819879ed
+    home: https://github.com/danielqsj/kafka_exporter
+    keywords:
+    - prometheus
+    - kafka
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: golgoth31@notrenet.com
+      name: golgoth31
+    name: prometheus-kafka-exporter
+    sources:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-kafka-exporter-1.6.0/prometheus-kafka-exporter-1.6.0.tgz
+    version: 1.6.0
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-kafka-exporter
+    apiVersion: v2
     appVersion: v1.4.1
     created: "2021-09-18T17:20:03.662250121Z"
     dependencies:
@@ -49435,4 +49465,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-10T22:26:06.544289103Z"
+generated: "2022-06-10T22:29:15.034270005Z"
