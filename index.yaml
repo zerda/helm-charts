@@ -45530,6 +45530,28 @@ entries:
   prometheus-postgres-exporter:
   - apiVersion: v2
     appVersion: 0.10.1
+    created: "2022-06-12T09:27:32.330070872Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: 4e1833212cf16ebfca31cc1aa3d041ec0498bc5fd891c7aea4bb12875d12e05e
+    home: https://github.com/prometheus-community/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-postgres-exporter
+    sources:
+    - https://github.com/prometheus-community/postgres_exporter
+    type: application
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-postgres-exporter-3.0.1/prometheus-postgres-exporter-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
+    appVersion: 0.10.1
     created: "2022-05-05T16:51:45.10287484Z"
     description: A Helm chart for prometheus postgres-exporter
     digest: 9e272596a38d06b80d2463e30354a8a9942c7002093bffbe574922e07db7af61
@@ -49784,4 +49806,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-12T09:18:40.452406301Z"
+generated: "2022-06-12T09:27:32.345131575Z"
