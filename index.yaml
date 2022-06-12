@@ -31626,6 +31626,25 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: v0.3.0
+    created: "2022-06-12T09:18:40.435439199Z"
+    description: Install prometheus-json-exporter
+    digest: 8e45c55099397bbb7e08d92e3ed2c70e75212e3c6d1550d87b86ca393901e675
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    maintainers:
+    - email: schmiddim@gmx.at
+      name: schmiddim
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-json-exporter
+    type: application
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-json-exporter-0.2.2/prometheus-json-exporter-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: v0.3.0
     created: "2022-06-07T14:56:42.629990709Z"
     description: Install prometheus-json-exporter
     digest: fe92e31fba9830d7910e05b148401cb8477f3601a9dc450fa19f7f9799a31a03
@@ -49765,4 +49784,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-12T07:52:28.683904972Z"
+generated: "2022-06-12T09:18:40.452406301Z"
