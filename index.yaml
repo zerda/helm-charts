@@ -32288,6 +32288,26 @@ entries:
   prometheus-mongodb-exporter:
   - apiVersion: v2
     appVersion: 0.31.0
+    created: "2022-06-18T20:37:04.194504075Z"
+    description: A Prometheus exporter for MongoDB metrics
+    digest: 50a8bbcc1436dd5da4da478b97df5f72a064a9f57b530a294808010da3048b0e
+    home: https://github.com/percona/mongodb_exporter
+    keywords:
+    - exporter
+    - metrics
+    - mongodb
+    - prometheus
+    maintainers:
+    - email: ssheehy@firescope.com
+      name: steven-sheehy
+    name: prometheus-mongodb-exporter
+    sources:
+    - https://github.com/percona/mongodb_exporter
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prometheus-mongodb-exporter-3.1.0/prometheus-mongodb-exporter-3.1.0.tgz
+    version: 3.1.0
+  - apiVersion: v2
+    appVersion: 0.31.0
     created: "2022-06-10T17:08:51.899502502Z"
     description: A Prometheus exporter for MongoDB metrics
     digest: 01274130d0de739a761b517917741990cc93bfca585eeb20fa19ec5fa88dd8b8
@@ -50058,4 +50078,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-17T15:10:13.672526765Z"
+generated: "2022-06-18T20:37:04.211601403Z"
