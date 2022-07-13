@@ -19213,6 +19213,25 @@ entries:
     urls:
     - https://github.com/prometheus-community/helm-charts/releases/download/kube-state-metrics-2.13.2/kube-state-metrics-2.13.2.tgz
     version: 2.13.2
+  prom-label-proxy:
+  - apiVersion: v2
+    appVersion: v0.5.0
+    created: "2022-07-13T08:09:01.301696938Z"
+    description: A proxy that enforces a given label in a given PromQL query.
+    digest: bdb2483d7feafe1297bebaf67833d232491b7a3ec80b053259f414e2d787f39e
+    home: https://github.com/prometheus-community/prom-label-proxy
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    maintainers:
+    - email: github@jkroepke.de
+      name: jkroepke
+    name: prom-label-proxy
+    type: application
+    urls:
+    - https://github.com/prometheus-community/helm-charts/releases/download/prom-label-proxy-0.1.0/prom-label-proxy-0.1.0.tgz
+    version: 0.1.0
   prometheus:
   - apiVersion: v2
     appVersion: 2.36.2
@@ -51253,4 +51272,4 @@ entries:
     urls:
     - https://prometheus-community.github.io/helm-charts/prometheus-to-sd-0.1.0.tgz
     version: 0.1.0
-generated: "2022-07-12T17:40:34.206878126Z"
+generated: "2022-07-13T08:09:01.316256677Z"
